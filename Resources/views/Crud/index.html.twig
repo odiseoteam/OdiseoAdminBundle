@@ -1,0 +1,23 @@
+{% extends 'OdiseoAdminBundle::layout.html.twig' %}
+
+{% import 'OdiseoAdminBundle:Macro:headers.html.twig' as headers %}
+
+{% set definition = resources.definition %}
+{% set data = resources.data %}
+
+{% set header = configuration.vars.header|default(metadata.applicationName~'.ui.'~metadata.pluralName) %}
+
+{% block title %}{{ parent() }} {{ header|trans }}{% endblock %}
+
+{% block content_title %}
+    <h1><i class="fa fa-{{ configuration.vars.icon|default('list') }}"></i> {{ header|trans }}</h1>
+{% endblock %}
+
+{% block breadcrumb %}
+    {% include configuration.vars.templates.breadcrumb|default('@OdiseoAdmin/Crud/Index/_breadcrumb.html.twig') %}
+{% endblock %}
+
+{% block content %}
+{% include '@OdiseoAdmin/Crud/Index/_header.html.twig' %}
+{% include '@OdiseoAdmin/Crud/Index/_content.html.twig' %}
+{% endblock %}

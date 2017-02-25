@@ -1,0 +1,28 @@
+{
+	"name" : "odiseoteam/odiseo-admin-bundle",
+	"type" : "symfony-bundle",
+	"description" : "This bundle make an admin for projects",
+	"keywords" : [
+		"symfony",
+		"admin",
+		"cms"
+	],
+	"homepage" : "http://odiseo.com.ar",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Odiseo Team",
+			"email" : "team@odiseo.com.ar"
+		}
+	],
+	"require" : {
+		"php" : ">=5.3.9",
+	  	"white-october/pagerfanta-bundle" : "~1.0",
+        "sylius/resource-bundle" : "^1.0@beta",
+        "sylius/grid-bundle" : "^1.0@beta"
+	},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+	"autoload" : {
+		"psr-4": { "Odiseo\\Bundle\\AdminBundle\\": "" }
+	}
+}

@@ -1,0 +1,54 @@
+{% import 'OdiseoAdminBundle:Macro:pagination.html.twig' as pagination %}
+{% import 'OdiseoAdminBundle:Macro:buttons.html.twig' as buttons %}
+{% import 'OdiseoAdminBundle:Macro:messages.html.twig' as messages %}
+{% import 'OdiseoAdminBundle:Macro:table.html.twig' as table %}
+
+{% set definition = grid.definition %}
+{% set data = grid.data %}
+
+{% set path = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) %}
+
+{% if definition.filters|length > 0 %}
+<div class="box">
+    <div class="box-header with-border">
+        <h1 class="box-title"><i class="fa fa-filter"></i> Filter</h1>
+    </div>
+    <div class="box-body">
+        <form method="get" action="{{ path }}" class="form-inline form-filter">
+            {% for filter in definition.filters if filter.enabled %}
+            {{ sylius_grid_render_filter(grid, filter) }}
+            {% endfor %}
+
+            {{ buttons.filter() }}
+            {{ buttons.resetFilters(path) }}
+        </form>
+    </div>
+</div>
+{% endif %}
+
+{% if data|length > 0 %}
+<div class="box box-primary">
+    <div class="box-header with-border">
+    {{ pagination.simple(data) }}
+    </div>
+    <div class="box-body table-responsive no-padding">
+        <table id="users" class="table table-hover">
+            <thead>
+            <tr>
+                {{ table.headers(grid, definition, app.request.attributes) }}
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+                {{ table.row(grid, definition, row) }}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="box-footer">
+        {{ pagination.simple(data) }}
+    </div>
+</div>
+{% else %}
+    {{ messages.info('sylius.ui.no_results_to_display'|trans) }}
+{% endif %}

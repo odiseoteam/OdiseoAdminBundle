@@ -1,0 +1,62 @@
+{% macro default(url, message, id, icon, class = 'btn-default') %}
+    <a class="btn btn-flat {% if class is not empty %} {{ class }} {% endif %}" {% if id is not null %} id="{{ id }}"{% endif %} href="{{ url }}">
+        {% if icon is not empty %}
+            <i class="fa fa-{{ icon }}"></i>
+        {% endif %}
+        {% if message is not empty %}
+            {{ message|trans }}
+        {% endif %}
+    </a>
+{% endmacro %}
+
+{% macro show(url, message, id, class, labeled = true) %}
+    {% import _self as buttons %}
+
+    {% if message is empty and labeled %}
+        {% set message = 'sylius.ui.show'|trans %}
+    {% endif %}
+
+    {{ buttons.default(url, message, id, 'search') }}
+{% endmacro %}
+
+{% macro create(url, message, id, labeled = true) %}
+    {% import _self as buttons %}
+
+    {% if message is empty and labeled %}
+        {% set message = 'sylius.ui.create'|trans %}
+    {% endif %}
+
+    {{ buttons.default(url, message, id, 'plus-circle', 'btn-primary') }}
+{% endmacro %}
+
+{% macro edit(url, message, id, labeled = true) %}
+    {% import _self as buttons %}
+
+    {% if message is empty and labeled %}
+        {% set message = 'sylius.ui.edit'|trans %}
+    {% endif %}
+
+    {{ buttons.default(url, message, id, 'pencil', 'btn-primary') }}
+{% endmacro %}
+
+{% macro filter(message) %}
+    <button class="btn btn-primary" type="submit">
+        <i class="fa fa-search"></i> {{ message is empty ? 'sylius.ui.filter'|trans : message }}
+    </button>
+{% endmacro %}
+
+{% macro resetFilters(url, message) %}
+    <a class="btn" href="{{ url }}">
+        <i class="fa fa-remove"></i> {{ message is empty ? 'sylius.ui.clear_filters'|trans : message }}
+    </a>
+{% endmacro %}
+
+{% macro delete(url, message, labeled = true, resourceId = null) %}
+    <form action="{{ url }}" method="post" class="inline">
+        <input type="hidden" name="_method" value="DELETE">
+        <button class="btn btn-flat btn-danger" type="submit" data-requires-confirmation>
+            <i class="fa fa-trash-o"></i> {{ (message is empty and labeled) ? 'sylius.ui.delete'|trans : message }}
+        </button>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token(resourceId) }}" />
+    </form>
+{% endmacro %}

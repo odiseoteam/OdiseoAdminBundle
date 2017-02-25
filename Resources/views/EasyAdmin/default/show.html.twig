@@ -1,0 +1,13 @@
+{% extends '@EasyAdmin/default/show.html.twig' %}
+
+{% block content_title %}
+    <h1><i class="fa fa-eye"></i>{{ parent() }}</h1>
+{% endblock %}
+
+{% block main %}
+<div class="box box-primary">
+    <div class="box-body">
+    {{ parent() }}
+    </div>
+</div>
+{% endblock %}

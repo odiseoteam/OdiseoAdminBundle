@@ -1,0 +1,31 @@
+odiseo:
+    ui:
+        dashboard: Dashboard
+
+sylius:
+    ui:
+        create: Create
+        contains: Contains
+        not_contains: Not contains
+        equal: Equal
+        empty: Empty
+        not_empty: Not empty
+        starts_with: Starts with
+        ends_with: Ends with
+        in: In
+        not_in: Not in
+        all: All
+        yes_label: Yes
+        no_label: No
+        filter: Filter
+        enabled: Enabled
+        clear_filters: Clear filters
+        info: Info
+        no_results_to_display: No results to display
+        edit: Edit
+        new: New
+        delete: Delete
+        save_changes: Save changes
+        cancel: Cancel
+        confirm_your_action: Confirm action
+        are_your_sure_you_want_to_perform_this_action: Are you sure that you want to perform this action?

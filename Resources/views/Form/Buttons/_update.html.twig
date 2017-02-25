@@ -1,0 +1,5 @@
+<div class="form-actions">
+    <button type="submit" class="btn btn-primary pull-left"><i class="fa fa-save"></i> {{ 'sylius.ui.save_changes'|trans }}</button>
+    <div class="or" data-text="{{ 'sylius.ui.or'|trans }}"></div>
+    {% include '@OdiseoAdmin/Form/Buttons/_cancel.html.twig' with {'path': paths.cancel|default(null)} %}
+</div>

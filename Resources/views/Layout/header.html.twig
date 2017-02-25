@@ -1,0 +1,34 @@
+<!-- Main Header -->
+<header class="main-header">
+	<!-- Logo -->
+	{% block header_logo %}
+		{% set _site_name_length = easyadmin_config('site_name')|length <= 10 ? 'short'
+		: easyadmin_config('site_name')|length <= 12 ? 'medium' : 'long'
+		%}
+		<a href="{{ path('odiseo_backend_index') }}" class="logo {{ _site_name_length }}">{{ easyadmin_config('site_name')|raw }}</a>
+	{% endblock header_logo %}
+
+	<!-- Header Navbar -->
+	<nav class="navbar navbar-static-top" role="navigation">
+		<!-- Sidebar toggle button-->
+		<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+			<span class="sr-only">Toggle navigation</span>
+		</a>
+		<!-- Navbar Right Menu -->
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+				<!-- Messages: style can be found in dropdown.less-->
+				{#{ include('OdiseoAdminBundle:Layout/Header:messagesMenu.html.twig') }#}
+				
+				<!-- Notifications: style can be found in dropdown.less -->
+				{#{ include('OdiseoAdminBundle:Layout/Header:notificationsMenu.html.twig') }#}
+				
+				<!-- Tasks: style can be found in dropdown.less -->
+				{#{ include('OdiseoAdminBundle:Layout/Header:tasksMenu.html.twig') }#}
+                        
+				<!-- User Account: style can be found in dropdown.less -->
+				{{ include('OdiseoAdminBundle:Layout/Header:userAccount.html.twig') }}
+			</ul>
+		</div>
+	</nav>
+</header>

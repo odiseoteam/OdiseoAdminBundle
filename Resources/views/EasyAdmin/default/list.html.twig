@@ -1,0 +1,63 @@
+{% extends '@EasyAdmin/default/list.html.twig' %}
+
+{% block content_title %}
+    <h1><i class="fa fa-circle-thin"></i>{{ parent() }}</h1>
+{% endblock %}
+
+{% block new_action %}
+    {% set _action = easyadmin_get_action_for_list_view('new', _entity_config.name) %}
+    <a class="btn btn-primary {{ _action.css_class|default('') }}" href="{{ path('easyadmin', _request_parameters|merge({ action: _action.name })) }}">
+        {% if _action.icon %}<i class="fa fa-{{ _action.icon }}"></i>{% else %}<i class="fa fa-plus-circle"></i>{% endif %}
+        {{ _action.label|default('action.new')|trans(_trans_parameters) }}
+    </a>
+{% endblock new_action %}
+
+{% block search_action %}
+    {% set _action = easyadmin_get_action_for_list_view('search', _entity_config.name) %}
+    <form id="content-search" class="{{ _action.css_class|default('') }}" method="get" action="{{ path('easyadmin') }}" style="display: inline-block;vertical-align: middle">
+        <input type="hidden" name="action" value="search">
+        <input type="hidden" name="entity" value="{{ _request_parameters.entity }}">
+        <input type="hidden" name="sortField" value="{{ _request_parameters.sortField }}">
+        <input type="hidden" name="sortDirection" value="{{ _request_parameters.sortDirection }}">
+        <div class="input-group">
+            <input class="form-control" id="content-search-query" type="search" name="query" placeholder="{{ _action.label|default('action.search')|trans(_trans_parameters) }}" value="{{ app.request.get('query')|default('') }}">
+        </div>
+    </form>
+{% endblock search_action %}
+
+{% block content_header %}
+<div class="box box-solid">
+    <div class="box-body page-header">
+        <div class="actions-menu">
+            {{ block('view_actions') }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div class="box box-primary">
+    {% if paginator.haveToPaginate %}
+    <div class="box-header with-border">
+        {{ block('paginator') }}
+    </div>
+    {% endif %}
+    <div class="box-body table-responsive no-padding">
+        {% set _list_item_actions = easyadmin_get_actions_for_list_item(_entity_config.name) %}
+
+        <table class="table table-hover">
+            <thead>
+                {{ block('table_head') }}
+            </thead>
+            <tbody>
+                {{ block('table_body') }}
+            </tbody>
+        </table>
+    </div>
+    {% if paginator.haveToPaginate %}
+    <div class="box-footer">
+        {{ block('paginator') }}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

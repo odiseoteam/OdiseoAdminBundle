@@ -1,0 +1,31 @@
+odiseo:
+    ui:
+        dashboard: Dashboard
+
+sylius:
+    ui:
+        create: Crear
+        contains: Contiene
+        not_contains: No contiene
+        equal: Igual
+        empty: Vacio
+        not_empty: No vacio
+        starts_with: Empieza con
+        ends_with: Termina con
+        in: Incluye
+        not_in: No incluye
+        all: Todos
+        yes_label: Si
+        no_label: No
+        filter: Filtro
+        enabled: Habilitado
+        clear_filters: Limpiar filtros
+        info: Informacioń
+        no_results_to_display: Sin resultados
+        edit: Editar
+        new: Nuevo
+        delete: Eliminar
+        save_changes: Guardar
+        cancel: Cancelar
+        confirm_your_action: Confimar acción
+        are_your_sure_you_want_to_perform_this_action: Estás seguro que quieres realizar esta accion?

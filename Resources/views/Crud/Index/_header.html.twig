@@ -1,0 +1,11 @@
+<div class="box box-solid">
+    <div class="box-body page-header">
+        <div class="actions-menu">
+            {% if definition.actionGroups.main is defined and definition.getActions('main')|length > 0 %}
+                {% for action in definition.getActions('main') %}
+                    {{ sylius_grid_render_action(resources, action, null) }}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="confirmation-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">{{ 'sylius.ui.confirm_your_action'|trans }}</h4>
+            </div>
+            <div class="modal-body">
+                <p>{{ 'sylius.ui.are_your_sure_you_want_to_perform_this_action'|trans }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{ 'sylius.ui.no_label'|trans }}</button>
+                <button type="button" class="btn btn-primary" id="confirmation-button">{{ 'sylius.ui.yes_label'|trans }}</button>
+            </div>
+        </div>
+    </div>
+</div><!-- /.modal -->

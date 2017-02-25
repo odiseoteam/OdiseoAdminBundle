@@ -1,0 +1,17 @@
+odiseo_admin_security_login:
+    path: /login
+    methods: [GET]
+    defaults:
+        _controller: OdiseoAdminBundle:Security:login
+
+odiseo_admin_security_login_check:
+    path: /login-check
+    methods: [POST]
+    defaults:
+        _controller: OdiseoAdminBundle:Security:check
+
+odiseo_admin_security_logout:
+    path: /logout
+    methods: [GET]
+    defaults:
+        _controller: OdiseoAdminBundle:Security:logout

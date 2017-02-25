@@ -1,0 +1,5 @@
+odiseo.admin:
+    menu.main:
+      dashboard:    "Dashboard"
+      homepage:     "Ver Sitio"
+      logout:       "Salir"  

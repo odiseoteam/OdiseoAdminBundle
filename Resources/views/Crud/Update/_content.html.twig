@@ -1,0 +1,16 @@
+<div class="box box-primary">
+    {{ form_start(form, {'action': path(configuration.getRouteName('update'), configuration.vars.route.parameters|default({ 'id': resource.id })), 'attr': {'class': 'form-horizontal', 'novalidate': 'novalidate'}}) }}
+    <div class="box-body">
+        <input type="hidden" name="_method" value="PUT" />
+        {% if configuration.vars.templates.form is defined %}
+            {% include configuration.vars.templates.form %}
+        {% else %}
+            {{ form_widget(form) }}
+        {% endif %}
+    </div>
+    <div class="box-footer">
+        {% include '@OdiseoAdmin/Form/Buttons/_update.html.twig' with {'paths': {'cancel': path(configuration.getRouteName('index'), configuration.vars.route.parameters|default({}))}} %}
+        {{ form_row(form._token) }}
+        {{ form_end(form, {'render_rest': false}) }}
+    </div>
+</div>
