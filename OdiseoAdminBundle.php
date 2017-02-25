@@ -1,6 +1,6 @@
 <?php
 
-namespace Odiseo\Bundle\BackendBundle;
+namespace Odiseo\Bundle\AdminBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
