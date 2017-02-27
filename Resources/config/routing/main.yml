@@ -2,8 +2,11 @@ odiseo_admin_index:
     path: /
     defaults:
         _controller: FrameworkBundle:Redirect:redirect
-        route: %odiseo_backend.homepage_route%
+        route: %odiseo_admin.homepage_route%
         permanent: true
 
 odiseo_admin_security:
-    resource: @OdiseoAdminBundle/Resources/config/routing/security.yml
+    resource: "@OdiseoAdminBundle/Resources/config/routing/security.yml"
+
+odiseo_admin_admin_user:
+    resource: "@OdiseoAdminBundle/Resources/config/routing/admin_user.yml"

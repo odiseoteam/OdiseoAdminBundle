@@ -1,2 +1,2 @@
-OdiseoBackendBundle
+OdiseoAdminBundle
 

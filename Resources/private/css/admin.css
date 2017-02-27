@@ -1,0 +1,120 @@
+body > .header .logo {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.content .row .pagination ul, .content .row .pagination li{
+    display: inline;
+    padding: 2px 7px; /*Separar el texto*/
+    margin:5px; /* Separar los botones */
+}
+
+.sended{
+    color: rgb(243, 156, 18);
+}
+
+.box .box-body .alert {
+    margin: 0;
+}
+
+.box .horario{
+    color: #48c1c5;
+}
+
+.form-group input[type=checkbox]{ width:20px; }
+
+.form-group #lan_configuration_dateBegin_date{ float:left;}
+.form-group #lan_configuration_dateEnd_date{ float:left;}
+.form-group #lan_configuration_dateBegin_time_hour{ margin-left:3px;}
+.form-group #lan_configuration_dateEnd_time_hour{ margin-left:3px;}
+
+.checkbox label, .radio label {
+    padding: 0;
+}
+.checkbox label .icheckbox_flat-blue, .radio label .iradio_flat-blue {
+    margin-right: 10px;
+}
+
+.user-panel>.info {
+    max-width: 160px;
+}
+
+.btn {
+    text-transform: capitalize;
+}
+
+.btn i {
+    margin-right: 3px;
+}
+
+.tabbable .nav-tabs {
+    border-bottom: none;
+}
+
+.tabbable .tab-content {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.file-overlay {
+    position: absolute;
+}
+
+.file-overlay + input[type="file"] {
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-opacity: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 200px;
+    z-index: 100;
+}
+
+.pagination {
+    margin: 0px;
+}
+
+.content .row .pagination li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.table>thead>tr>th {
+    text-transform: uppercase;
+}
+
+.table>thead>tr>th>a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.table>thead>tr>th>a:hover {
+    color: #3c8dbc;
+}
+
+.table>tbody>tr.info>td, .table>tbody>tr.info>th, .table>tbody>tr>td.info, .table>tbody>tr>th.info, .table>tfoot>tr.info>td, .table>tfoot>tr.info>th, .table>tfoot>tr>td.info, .table>tfoot>tr>th.info, .table>thead>tr.info>td, .table>thead>tr.info>th, .table>thead>tr>td.info, .table>thead>tr>th.info {
+    background-color: #FFFFFF;
+}
+
+.delete-action-form {
+    display: inline-block;
+}
+
+#form-actions-row {
+    padding: 0 50px;
+    margin-top: 20px;
+}
+
+.field-image .form-control, .field-text .form-control, .field-raw .form-control {
+    height: auto;
+}
+
+.field-image .form-control img {
+    max-height: 100px;
+    max-width: 100%;
+    display: block;
+}
+
+.list .actions .btn {
+    margin-right: 5px;
+}

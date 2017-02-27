@@ -34,13 +34,6 @@
 			<li class="header">MENU</li>
 			<!-- Optionally, you can add icons to the links -->			
 			{% block navigation_items %}
-			{% for item in easyadmin_config('entities') %}
-			<li class="{{ item.name|lower == app.request.get('entity')|lower ? 'active' : '' }}">
-				<a href="{{ path('easyadmin', { entity: item.name, action: 'list' }) }}">
-					<i class="fa fa-circle-thin"></i> <span>{{- item.label|trans -}}</span>
-				</a>
-			</li>
-			{% endfor %}
             <!-- <li class="treeview">
 				<a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
 				<ul class="treeview-menu">

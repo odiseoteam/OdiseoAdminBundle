@@ -2,10 +2,7 @@
 <header class="main-header">
 	<!-- Logo -->
 	{% block header_logo %}
-		{% set _site_name_length = easyadmin_config('site_name')|length <= 10 ? 'short'
-		: easyadmin_config('site_name')|length <= 12 ? 'medium' : 'long'
-		%}
-		<a href="{{ path('odiseo_backend_index') }}" class="logo {{ _site_name_length }}">{{ easyadmin_config('site_name')|raw }}</a>
+		<a href="{{ path('odiseo_admin_index') }}" class="logo">Dashboard</a>
 	{% endblock header_logo %}
 
 	<!-- Header Navbar -->

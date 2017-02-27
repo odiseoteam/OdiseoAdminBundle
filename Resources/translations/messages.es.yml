@@ -29,3 +29,6 @@ sylius:
         cancel: Cancelar
         confirm_your_action: Confimar acción
         are_your_sure_you_want_to_perform_this_action: Estás seguro que quieres realizar esta accion?
+        admin_users: Administradores
+        edit_admin_user: Editar Administrador
+        new_admin_user: Crear Administrador

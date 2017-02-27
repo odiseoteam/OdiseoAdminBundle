@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@OdiseoAdminBundle/Resources/config/grids/admin_user.yml" }

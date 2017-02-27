@@ -20,20 +20,20 @@ var paths = {
         js: [
             nodeModulesPath + 'jquery/dist/jquery.min.js',
             nodeModulesPath + 'bootstrap/dist/js/bootstrap.min.js',
-            'Resources/public/js/form-spinner.js',
-            'Resources/public/js/sylius-require-confirmation.js',
-            'Resources/public/plugins/iCheck/icheck.min.js',
-            'Resources/public/js/AdminLTE/app.min.js',
-            'Resources/public/js/backend.js'
+            'Resources/private/js/form-spinner.js',
+            'Resources/private/js/sylius-require-confirmation.js',
+            'Resources/private/plugins/iCheck/icheck.min.js',
+            'Resources/private/js/AdminLTE/app.min.js',
+            'Resources/private/js/admin.js'
         ],
         css: [
             nodeModulesPath + 'bootstrap/dist/css/bootstrap.min.css',
             nodeModulesPath + 'font-awesome/css/font-awesome.min.css',
             nodeModulesPath + 'ionicons/css/ionicons.min.css',
-            'Resources/public/plugins/iCheck/flat/blue.css',
-            'Resources/public/css/AdminLTE/AdminLTE.min.css',
-            'Resources/public/css/AdminLTE/skins/skin-blue.min.css',
-            'Resources/public/css/backend.css'
+            'Resources/private/plugins/iCheck/flat/blue.css',
+            'Resources/private/css/AdminLTE/AdminLTE.min.css',
+            'Resources/private/css/AdminLTE/skins/skin-blue.min.css',
+            'Resources/private/css/admin.css'
         ],
         login_js: [
             nodeModulesPath + 'jquery/dist/jquery.min.js',
@@ -42,14 +42,14 @@ var paths = {
         login_css: [
             nodeModulesPath + 'bootstrap/dist/css/bootstrap.min.css',
             nodeModulesPath + 'font-awesome/css/font-awesome.min.css',
-            'Resources/public/css/AdminLTE/AdminLTE.min.css',
-            'Resources/public/css/backend-outside.css'
+            'Resources/private/css/AdminLTE/AdminLTE.min.css',
+            'Resources/private/css/admin-outside.css'
         ],
         img: [
-            'Resources/public/img/**'
+            'Resources/private/img/**'
         ],
         css_img: [
-            'Resources/public/plugins/iCheck/flat/*.png'
+            'Resources/private/plugins/iCheck/flat/*.png'
         ],
         fonts: [
             nodeModulesPath + 'bootstrap/dist/fonts/**',

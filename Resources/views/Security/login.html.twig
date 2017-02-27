@@ -11,7 +11,7 @@
 			{{ error.messageKey|trans(error.messageData, 'security') }}
 		</div>
 		{% endif %}
-        <form action="{{ path('odiseo_backend_security_login_check') }}" method="post">
+        <form action="{{ path('odiseo_admin_login_check') }}" method="post">
 			<div class="form-group has-feedback">
 				<input type="text" class="form-control" name="_username" placeholder="Usuario"/>
 				<span class="glyphicon glyphicon-user form-control-feedback"></span>

@@ -1,0 +1,7 @@
+parameters:
+services:
+    odiseo_admin.form.type.admin_user:
+        class: Odiseo\Bundle\AdminBundle\Form\Type\AdminUserType
+        arguments: ['%sylius.model.admin_user.class%']
+        tags:
+            - { name: form.type, alias: odiseo_admin_user }

@@ -1,0 +1,16 @@
+odiseo_admin_admin_user:
+    resource: |
+        alias: sylius.admin_user
+        section: admin
+        templates: OdiseoAdminBundle:Crud
+        except: ['show']
+        redirect: index
+        grid: odiseo_admin_user
+        permission: true
+        vars:
+            all:
+                templates:
+                    form: OdiseoAdminBundle:AdminUser:_form.html.twig
+            index:
+                icon: user
+    type: sylius.resource
