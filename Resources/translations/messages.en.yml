@@ -1,9 +1,19 @@
 odiseo:
     ui:
         dashboard: Dashboard
+        username: Username
+        email: Email
+        last_login: Last Login
+        enabled: Enabled
+        actions: Actions
+        users: Users
+        edit_user: Edit user
+        new_user: New user
+        admin_users: Usuarios
 
 sylius:
     ui:
+        show: Mostrar
         create: Create
         contains: Contains
         not_contains: Not contains
