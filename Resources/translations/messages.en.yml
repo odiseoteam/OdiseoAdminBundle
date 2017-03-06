@@ -10,6 +10,7 @@ odiseo:
         edit_user: Edit user
         new_user: New user
         admin_users: Usuarios
+        choose_file: Choose File
 
 sylius:
     ui:

@@ -1,23 +1,5 @@
 {% extends 'OdiseoAdminBundle::forms.html.twig' %}
 
-{% block form_row %}
-    {% spaceless %}
-        <div class="form-group{% if errors|length > 0 %} has-error{% endif %}">
-            {{ form_label(form, null, {'label_attr': {'class': 'sr-only'}}) }}
-            {{ form_widget(form, criteria|default({})) }}
-            {% for error in errors %}
-                <span class="help-block">
-                {{
-                error.messagePluralization is null
-                ? error.messageTemplate|trans(error.messageParameters, 'validators')
-                : error.messageTemplate|transchoice(error.messagePluralization, error.messageParameters, 'validators')
-                }}
-            </span>
-            {% endfor %}
-        </div>
-    {% endspaceless %}
-{% endblock form_row %}
-
 {%- block form_errors -%}
     {%- if errors|length > 0 -%}
         {%- for error in errors -%}
@@ -27,16 +9,6 @@
         {%- endfor -%}
     {%- endif -%}
 {%- endblock form_errors -%}
-
-{% block checkbox_row -%}
-    <div class="field{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
-        <div class="ui toggle checkbox">
-            {{- form_widget(form) -}}
-            {{- form_label(form) -}}
-            {{- form_errors(form) -}}
-        </div>
-    </div>
-{%- endblock checkbox_row %}
 
 {% block radio_row -%}
     <div class="field{% if (not compound or force_error|default(false)) and not valid %} error{% endif %}">
@@ -117,3 +89,29 @@
         </div>
     {% endspaceless %}
 {% endmacro %}
+
+{% block sylius_translations_row -%}
+{% for translation in form %}
+    {{- form_errors(form) -}}
+    {{ form_label(translation, translation.vars.name, {'label_attr': {'class': ' '}}) }}
+    <br>
+    {{ form_widget(translation) }}
+{% endfor %}
+{%- endblock sylius_translations_row %}
+
+{% block sylius_resource_autocomplete_choice_row %}
+    {{- form_label(form) -}}
+    <div
+            class="sylius-autocomplete ui fluid search selection dropdown {% if multiple %}multiple{% endif %}"
+            data-url="{{ remote_url }}"
+            data-choice-name="{{ choice_name }}"
+            data-choice-value="{{ choice_value }}"
+            data-criteria-type="{{ remote_criteria_type }}"
+            data-criteria-name="{{ remote_criteria_name }}"
+    >
+        {{ form_row(form, {'attr': {'class' : 'autocomplete'}}) }}
+        <i class="dropdown icon"></i>
+        <div class="default text">{% if placeholder is defined %} {{ placeholder|trans }} {% endif %}</div>
+        <div class="menu"></div>
+    </div>
+{% endblock %}

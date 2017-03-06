@@ -17,6 +17,7 @@ sylius_grid:
     templates:
         action:
             default: "@OdiseoAdmin/Grid/Action/default.html.twig"
+            archive: "@OdiseoAdmin/Grid/Action/archive.html.twig"
             create: "@OdiseoAdmin/Grid/Action/create.html.twig"
             delete: "@OdiseoAdmin/Grid/Action/delete.html.twig"
             show: "@OdiseoAdmin/Grid/Action/show.html.twig"
@@ -26,3 +27,5 @@ sylius_grid:
             boolean: "@OdiseoAdmin/Grid/Filter/boolean.html.twig"
             date: "@OdiseoAdmin/Grid/Filter/date.html.twig"
             entity: "@OdiseoAdmin/Grid/Filter/entity.html.twig"
+            exists: "@OdiseoAdmin/Grid/Filter/exists.html.twig"
+            money: "@OdiseoAdmin/Grid/Filter/money.html.twig"

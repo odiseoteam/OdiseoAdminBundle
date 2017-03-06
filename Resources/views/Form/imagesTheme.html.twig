@@ -36,27 +36,25 @@
 
 {% macro collection_item(form, allow_delete, button_delete_label, index) %}
     {% spaceless %}
-        <div class="column">
-            <div data-form-collection="item" data-form-collection-index="{{ index }}">
-                {{ form_widget(form) }}
-                {% if allow_delete %}
-                    <a href="#" data-form-collection="delete" class="ui red labeled icon button" style="margin-bottom: 1em;">
-                        <i class="trash icon"></i>
-                        {{ button_delete_label|trans }}
-                    </a>
-                {% endif %}
-            </div>
+        <div data-form-collection="item" data-form-collection-index="{{ index }}" class="column">
+            {{ form_widget(form) }}
+            {% if allow_delete %}
+                <a href="#" data-form-collection="delete" class="ui red labeled icon button" style="margin-bottom: 1em;">
+                    <i class="trash icon"></i>
+                    {{ button_delete_label|trans }}
+                </a>
+            {% endif %}
         </div>
     {% endspaceless %}
 {% endmacro %}
 
 {% block sylius_product_image_widget %}
     <div class="ui upload box segment">
-        {{ form_row(form.code) }}
+        {{ form_row(form.type) }}
         {% if form.vars.value.path|default(null) is null %}
             <label for="{{ form.file.vars.id }}" class="ui icon labeled button"><i class="cloud upload icon"></i> {{ 'sylius.ui.choose_file'|trans }}</label>
         {% else %}
-            <img class="ui small bordered image" src="{{ form.vars.value.path|imagine_filter('sylius_small') }}" alt="{{ form.vars.value.code }}" />
+            <img class="ui small bordered image" src="{{ form.vars.value.path|imagine_filter('sylius_small') }}" alt="{{ form.vars.value.type }}" />
             <label for="{{ form.file.vars.id }}" class="ui icon labeled button"><i class="cloud upload icon"></i> {{ 'sylius.ui.change_file'|trans }}</label>
         {% endif %}
         <div class="ui hidden element">
@@ -70,11 +68,11 @@
 
 {% block sylius_taxon_image_widget %}
     <div class="ui upload box segment">
-        {{ form_row(form.code) }}
+        {{ form_row(form.type) }}
         {% if form.vars.value.path|default(null) is null %}
             <label for="{{ form.file.vars.id }}" class="ui icon labeled button"><i class="cloud upload icon"></i> {{ 'sylius.ui.choose_file'|trans }}</label>
         {% else %}
-            <img class="ui small bordered image" src="{{ form.vars.value.path|imagine_filter('sylius_small') }}" alt="{{ form.vars.value.code }}" />
+            <img class="ui small bordered image" src="{{ form.vars.value.path|imagine_filter('sylius_small') }}" alt="{{ form.vars.value.type }}" />
             <label for="{{ form.file.vars.id }}" class="ui icon labeled button"><i class="cloud upload icon"></i> {{ 'sylius.ui.change_file'|trans }}</label>
         {% endif %}
         <div class="ui hidden element">

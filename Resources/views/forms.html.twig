@@ -16,7 +16,7 @@
         {% set type = type|default('text') %}
 
         {% if 'file' == type %}
-            <span class="btn btn-success file-overlay"><i class="fa fa-folder-open"></i> {{ 'sylius.form.choose_file'|trans }}</span>
+            <span class="btn btn-success file-overlay"><i class="fa fa-folder-open"></i> {{ 'odiseo.ui.choose_file'|trans }}</span>
         {% endif %}
         <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
     {% endspaceless %}
@@ -33,7 +33,7 @@
     {% spaceless %}
         <div class="input-group">
             <span class="input-group-addon">{{ money_pattern|replace({'{{ widget }}': ''}) }}</span>
-            {{ block('form_widget_simple') }}
+            {{ block('form_widget') }}
         </div>
     {% endspaceless %}
 {% endblock money_widget %}
