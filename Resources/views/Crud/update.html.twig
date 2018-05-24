@@ -1,7 +1,7 @@
-{% extends 'OdiseoAdminBundle::layout.html.twig' %}
+{% extends '@OdiseoAdmin/layout.html.twig' %}
 
-{% import 'OdiseoAdminBundle:Macro:headers.html.twig' as headers %}
-{% import 'OdiseoAdminBundle:Macro:buttons.html.twig' as buttons %}
+{% import '@OdiseoAdmin/Macro/headers.html.twig' as headers %}
+{% import '@OdiseoAdmin/Macro/buttons.html.twig' as buttons %}
 
 {% set header = configuration.vars.header|default(metadata.applicationName~'.ui.edit_'~metadata.name) %}
 
@@ -15,7 +15,7 @@
     {% include configuration.vars.templates.breadcrumb|default('@OdiseoAdmin/Crud/Update/_breadcrumb.html.twig') %}
 {% endblock %}
 
-{% form_theme form 'OdiseoAdminBundle:Form:theme.html.twig' %}
+{% form_theme form '@OdiseoAdmin/Form/theme.html.twig' %}
 
 {% block content %}
 {% include '@OdiseoAdmin/Crud/Update/_header.html.twig' %}

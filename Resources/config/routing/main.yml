@@ -2,7 +2,7 @@ odiseo_admin_index:
     path: /
     defaults:
         _controller: FrameworkBundle:Redirect:redirect
-        route: %odiseo_admin.homepage_route%
+        route: "%odiseo_admin.homepage_route%"
         permanent: true
 
 odiseo_admin_security:

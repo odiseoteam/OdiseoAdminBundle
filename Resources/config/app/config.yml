@@ -10,7 +10,6 @@ sylius_user:
                     model: Odiseo\Bundle\AdminBundle\Entity\AdminUser
                     repository: Odiseo\Bundle\AdminBundle\Doctrine\ORM\AdminUserRepository
                     form: Odiseo\Bundle\AdminBundle\Form\Type\AdminUserType
-                    interface: Sylius\Component\User\Model\UserInterface
                 templates: 'OdiseoAdminBundle:AdminUser'
 
 sylius_grid:

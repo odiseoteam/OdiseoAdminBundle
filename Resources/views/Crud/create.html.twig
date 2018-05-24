@@ -1,6 +1,6 @@
-{% extends 'OdiseoAdminBundle::layout.html.twig' %}
+{% extends '@OdiseoAdmin/layout.html.twig' %}
 
-{% import 'OdiseoAdminBundle:Macro:headers.html.twig' as headers %}
+{% import '@OdiseoAdmin/Macro/headers.html.twig' as headers %}
 
 {% set header = configuration.vars.header|default(metadata.applicationName~'.ui.new_'~metadata.name) %}
 

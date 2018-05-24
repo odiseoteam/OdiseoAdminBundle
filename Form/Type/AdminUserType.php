@@ -12,7 +12,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class AdminUserType extends UserType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         parent::buildForm($builder, $options);
     }
