@@ -2,6 +2,6 @@
     {% import _self as pagination %}
 
     {% if paginator.haveToPaginate() %}
-        {{ pagerfanta(paginator, 'semantic_ui_translated', options|default({})) }}
+        {{ pagerfanta(paginator, 'twitter_bootstrap3_translated', options|default({})) }}
     {% endif %}
 {% endmacro %}
