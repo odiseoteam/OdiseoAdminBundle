@@ -11,6 +11,7 @@ odiseo:
         new_user: Nuevo usuario
         admin_users: Usuarios
         choose_file: Seleccionar archivo
+        search: Buscar
 
 sylius:
     ui:

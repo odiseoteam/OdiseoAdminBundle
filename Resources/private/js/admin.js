@@ -14,5 +14,6 @@
         });
 
         $('[data-requires-confirmation]').requireConfirmation();
+        $('[data-form-type="collection"]').CollectionForm();
     });
 })( jQuery );
