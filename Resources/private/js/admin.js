@@ -15,5 +15,8 @@
 
         $('[data-requires-confirmation]').requireConfirmation();
         $('[data-form-type="collection"]').CollectionForm();
+
+        //Initialize Select2 Elements
+        $('.select2').select2();
     });
 })( jQuery );

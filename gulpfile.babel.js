@@ -39,6 +39,7 @@ const paths = {
             upath.joinSafe(sourcePath, 'js/sylius-require-confirmation.js'),
             upath.joinSafe(sourcePath, 'js/sylius-form-collection.js'),
             upath.joinSafe(sourcePath, 'plugins/iCheck/icheck.min.js'),
+            upath.joinSafe(sourcePath, 'plugins/select2/select2.full.min.js'),
             upath.joinSafe(sourcePath, 'js/AdminLTE/app.min.js'),
             upath.joinSafe(sourcePath, 'js/admin.js')
         ],
@@ -47,6 +48,7 @@ const paths = {
             upath.joinSafe(nodeModulesPath, 'font-awesome/css/font-awesome.min.css'),
             upath.joinSafe(nodeModulesPath, 'ionicons/css/ionicons.min.css'),
             upath.joinSafe(sourcePath, 'plugins/iCheck/flat/blue.css'),
+            upath.joinSafe(sourcePath, 'plugins/select2/select2.min.css'),
             upath.joinSafe(sourcePath, 'css/AdminLTE/AdminLTE.min.css'),
             upath.joinSafe(sourcePath, 'css/AdminLTE/skins/skin-blue.min.css'),
             upath.joinSafe(sourcePath, 'css/admin.css')

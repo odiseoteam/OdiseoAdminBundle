@@ -1,5 +1,5 @@
 <div class="box box-primary">
-    {{ form_start(form, {'action': path(configuration.vars.route.name|default(configuration.getRouteName('create')), configuration.vars.route.parameters|default({})), 'attr': {'class': 'form-horizontal', 'novalidate': 'novalidate'}}) }}
+    {{ form_start(form, {'action': path(configuration.vars.route.name|default(configuration.getRouteName('create')), configuration.vars.route.parameters|default({})), 'attr': {'class': '', 'novalidate': 'novalidate'}}) }}
     <div class="box-body">
         {% if configuration.vars.templates.form is defined %}
             {% include configuration.vars.templates.form %}

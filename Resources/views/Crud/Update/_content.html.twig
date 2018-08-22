@@ -1,5 +1,5 @@
 <div class="box box-primary">
-    {{ form_start(form, {'action': path(configuration.getRouteName('update'), configuration.vars.route.parameters|default({ 'id': resource.id })), 'attr': {'class': 'form-horizontal', 'novalidate': 'novalidate'}}) }}
+    {{ form_start(form, {'action': path(configuration.getRouteName('update'), configuration.vars.route.parameters|default({ 'id': resource.id })), 'attr': {'class': '', 'novalidate': 'novalidate'}}) }}
     <div class="box-body">
         <input type="hidden" name="_method" value="PUT" />
         {% if configuration.vars.templates.form is defined %}

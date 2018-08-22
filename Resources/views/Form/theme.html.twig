@@ -24,7 +24,7 @@
 
 {% block form_label %}
     {% spaceless %}
-        {% set label_attr = label_attr|merge({'class': label_attr.class|default('col-lg-2') ~ ' control-label'}) %}
+        {% set label_attr = label_attr|merge({'class': label_attr.class|default('') ~ ' control-label'}) %}
         {{ parent() }}
     {% endspaceless %}
 {% endblock form_label %}
@@ -87,7 +87,6 @@
     {% spaceless %}
         <div class="form-group{% if errors|length > 0 %} has-error{% endif %}">
             {{ form_label(form) }}
-            <div {% if label %}class="col-lg-10"{% endif %}>
                 {{ form_widget(form) }}
                 {% for error in errors %}
                     <span class="help-block form-error">
@@ -98,7 +97,6 @@
                 }}
             </span>
                 {% endfor %}
-            </div>
         </div>
     {% endspaceless %}
 {% endblock form_row %}
