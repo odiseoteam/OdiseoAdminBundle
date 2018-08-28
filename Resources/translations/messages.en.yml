@@ -12,6 +12,9 @@ odiseo:
         admin_users: Usuarios
         choose_file: Choose File
         search: Search
+        displaying: Displaying
+        of: of
+        results: Results
 
 sylius:
     ui:

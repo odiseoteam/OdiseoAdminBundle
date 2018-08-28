@@ -12,6 +12,9 @@ odiseo:
         admin_users: Usuarios
         choose_file: Seleccionar archivo
         search: Buscar
+        displaying: Mostrando
+        of: de
+        results: Resultados
 
 sylius:
     ui:
@@ -32,7 +35,7 @@ sylius:
         filter: Filtro
         enabled: Habilitado
         clear_filters: Limpiar filtros
-        info: Informacioń
+        info: Información
         no_results_to_display: Sin resultados
         edit: Editar
         new: Nuevo
