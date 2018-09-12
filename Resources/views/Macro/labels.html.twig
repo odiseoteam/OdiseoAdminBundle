@@ -13,14 +13,14 @@
 {% endmacro %}
 
 {% macro enabled() %}
-    <span class="label label-success">
+    <span class="label bg-green">
         <i class="fa fa-check"></i>
         {{ 'sylius.ui.enabled'|trans }}
     </span>
 {% endmacro %}
 
 {% macro disabled() %}
-    <span class="label label-danger">
+    <span class="label bg-red">
         <i class="fa fa-remove"></i>
         {{ 'sylius.ui.disabled'|trans }}
     </span>
@@ -37,14 +37,14 @@
 {% endmacro %}
 
 {% macro yes() %}
-    <span class="label">
+    <span class="label bg-green">
         <i class="fa fa-check"></i>
         {{ 'sylius.ui.yes_label'|trans }}
     </span>
 {% endmacro %}
 
 {% macro no() %}
-    <span class="label">
+    <span class="label bg-red">
         <i class="fa fa-remove"></i>
         {{ 'sylius.ui.no_label'|trans }}
     </span>

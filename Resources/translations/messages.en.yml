@@ -34,6 +34,7 @@ sylius:
         no_label: No
         filter: Filter
         enabled: Enabled
+        disabled: Disabled
         clear_filters: Clear filters
         info: Info
         no_results_to_display: No results to display
