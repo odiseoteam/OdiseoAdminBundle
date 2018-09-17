@@ -1,4 +1,3 @@
-import { uglify } from 'rollup-plugin-uglify';
 import concat from 'gulp-concat';
 import gulp from 'gulp';
 import gulpif from 'gulp-if';
@@ -7,6 +6,7 @@ import merge from 'merge-stream';
 import order from 'gulp-order';
 import sourcemaps from 'gulp-sourcemaps';
 import upath from 'upath';
+import uglify from 'gulp-uglify';
 import uglifycss from 'gulp-uglifycss';
 import yargs from 'yargs';
 
@@ -102,7 +102,7 @@ export const buildOdiseoAdminJs = function buildOdiseoAdminJs() {
     return gulp.src(paths.admin.js, { base: './' })
         .pipe(gulpif(env !== 'prod', sourcemaps.init()))
         .pipe(concat('odiseo-admin.js'))
-        .pipe(gulpif(env === 'prod', uglifycss()))
+        .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env !== 'prod', sourcemaps.mapSources(mapSourcePath)))
         .pipe(gulpif(env !== 'prod', sourcemaps.write('./')))
         .pipe(gulp.dest(upath.joinSafe(rootPath, 'js')))
@@ -134,7 +134,7 @@ export const buildOdiseoAdminLoginJs = function buildOdiseoAdminLoginJs() {
     return gulp.src(paths.admin.login_js, { base: './' })
         .pipe(gulpif(env !== 'prod', sourcemaps.init()))
         .pipe(concat('odiseo-admin-login.js'))
-        .pipe(gulpif(env === 'prod', uglifycss()))
+        .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env !== 'prod', sourcemaps.mapSources(mapSourcePath)))
         .pipe(gulpif(env !== 'prod', sourcemaps.write('./')))
         .pipe(gulp.dest(upath.joinSafe(rootPath, 'js')))
