@@ -20,17 +20,12 @@
     <div class="box-body">
         <form method="get" action="{{ path }}" class="form-filter">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12 fields-group">
                     {% for filter in definition.filters if filter.enabled %}
                         {{ sylius_grid_render_filter(grid, filter) }}
-                        {% if loop.index0 == ((definition.filters|length)/2)|round(1,'ceil') %}
-                </div>
-                <div class="col-md-6">
-                         {% endif %}
                     {% endfor %}
                 </div>
             </div>
-
             {{ buttons.filter() }}
             {{ buttons.resetFilters(path) }}
         </form>

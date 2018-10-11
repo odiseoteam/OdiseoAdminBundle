@@ -162,3 +162,17 @@ label.required:after {
 .mfp-zoom-in.mfp-removing.mfp-bg {
     opacity: 0;
 }
+.form-filter .fields-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-filter .fields-group .form-group {
+    width: 33%;
+    padding: 0 20px;
+}
+
+@media (max-width: 991px) {
+    .form-filter .fields-group .form-group {
+        width: 50%;
+    }
+}
