@@ -1,0 +1,5 @@
+{% import '@OdiseoAdmin/Macro/buttons.html.twig' as buttons %}
+
+{% set path = options.link.url|default(path(options.link.route, options.link.parameters)) %}
+
+{{ buttons.default(path, action.label, null, options.icon|default(''), options.class|default('btn-default')) }}

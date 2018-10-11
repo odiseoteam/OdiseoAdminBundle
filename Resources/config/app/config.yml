@@ -21,6 +21,7 @@ sylius_grid:
             delete: "@OdiseoAdmin/Grid/Action/delete.html.twig"
             show: "@OdiseoAdmin/Grid/Action/show.html.twig"
             update: "@OdiseoAdmin/Grid/Action/update.html.twig"
+            link: "@OdiseoAdmin/Grid/Action/link.html.twig"
         filter:
             string: "@OdiseoAdmin/Grid/Filter/string.html.twig"
             boolean: "@OdiseoAdmin/Grid/Filter/boolean.html.twig"
