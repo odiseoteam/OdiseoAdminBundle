@@ -10,7 +10,7 @@ odiseo_admin_admin_user:
         vars:
             all:
                 templates:
-                    form: OdiseoAdminBundle:AdminUser:_form.html.twig
+                    form: "@OdiseoAdmin/AdminUser/_form.html.twig"
             index:
                 icon: user
     type: sylius.resource
