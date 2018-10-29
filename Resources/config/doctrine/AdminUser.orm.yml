@@ -1,3 +1,3 @@
 Odiseo\Bundle\AdminBundle\Entity\AdminUser:
-    type: entity
+    type: mappedSuperclass
     table: odiseo_admin_user
