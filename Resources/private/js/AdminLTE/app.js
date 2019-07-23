@@ -376,13 +376,13 @@ $.AdminLTE.boxWidget = {
     var bf = box.find(".box-body, .box-footer");
     if (!box.hasClass("collapsed-box")) {
       //Convert minus into plus
-      element.children(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
+      element.find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
       bf.slideUp(300, function () {
         box.addClass("collapsed-box");
       });
     } else {
       //Convert plus into minus
-      element.children(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
+      element.find(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
       bf.slideDown(300, function () {
         box.removeClass("collapsed-box");
       });

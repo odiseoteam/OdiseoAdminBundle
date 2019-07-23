@@ -9,11 +9,11 @@
 {% set path = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) %}
 
 {% if definition.filters|length > 0 %}
-<div class="box box-success collapsed-box">
-    <div class="box-header with-border">
+<div class="box box-success{{ not app.request.get('criteria')?' collapsed-box':'' }} filter-box">
+    <div class="box-header with-border" data-widget="collapse">
         <h1 class="box-title"><i class="fa fa-filter"></i> Filter</h1>
         <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+            <button type="button" class="btn btn-box-tool"><i class="fa fa-plus"></i>
             </button>
         </div>
     </div>

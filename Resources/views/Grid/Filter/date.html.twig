@@ -1,4 +1,14 @@
 {% form_theme form 'OdiseoAdminBundle:Form:filterTheme.html.twig' %}
 
-{{ form_row(form.from, {'label': filter.label|trans ~ ' | ' ~ form.from.vars.label|trans }) }}
-{{ form_row(form.to) }}
+<div class="form-group time-range-group">
+    {{ form_label(form.from, filter.label|trans) }}
+    <input type="text" class="date-range form-control"
+           data-from-date-id="{{ form.from.date.vars.id }}"
+           data-to-date-id="{{ form.to.date.vars.id }}"
+    >
+
+    <div class="hide">
+        {{ form_widget(form.from, {'attr': {'class': 'start-date'}}) }}
+        {{ form_widget(form.to, {'attr': {'class': 'end-date'}}) }}
+    </div>
+</div>
