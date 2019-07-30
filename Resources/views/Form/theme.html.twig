@@ -16,7 +16,7 @@
         {% set type = type|default('text') %}
 
         {% if 'file' == type %}
-            <span class="btn btn-success file-overlay"><i class="fa fa-folder-open"></i> {{ 'odiseo.ui.choose_file'|trans }}</span>
+            <span class="btn btn-success file-overlay"><i class="fa fa-folder-open"></i> {{ attr['data-label'] is defined?attr['data-label']:'odiseo.ui.choose_file'|trans }}</span>
         {% endif %}
         <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
     {% endspaceless %}
