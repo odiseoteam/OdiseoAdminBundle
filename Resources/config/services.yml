@@ -1,2 +1,7 @@
 parameters:
 services:
+    odiseo_admin.listener.password_updater:
+        class: Sylius\Bundle\UserBundle\EventListener\PasswordUpdaterListener
+        arguments: ['@sylius.security.password_updater']
+        tags:
+            - { name: "kernel.event_listener", event: "sylius.admin_user.pre_update", method: "genericEventUpdater" }
