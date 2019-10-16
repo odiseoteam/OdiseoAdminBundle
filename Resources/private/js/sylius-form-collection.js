@@ -72,7 +72,8 @@
             this.$list.append(prototype);
             this.count = this.count + 1;
 
-            $(document).trigger('collection-form-add', [this.$list.children().last()]);
+            const collectionFormAddEvent = new CustomEvent('collection-form-add', {'detail': this.$list.children().last()});
+            document.dispatchEvent(collectionFormAddEvent);
         },
 
         /**
