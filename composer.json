@@ -17,7 +17,7 @@
 	"require" : {
 		"php": "^7.1",
 		"ext-iconv": "*",
-	  	"babdev/pagerfanta-bundle" : "^3.0",
+	  	"babdev/pagerfanta-bundle" : "^2.5",
 		"sylius/resource-bundle": "^1.2",
         "sylius/user-bundle" : "^1.2",
         "sylius/grid-bundle" : "^1.2"
