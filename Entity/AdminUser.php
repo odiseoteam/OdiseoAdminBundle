@@ -2,7 +2,7 @@
 
 namespace Odiseo\Bundle\AdminBundle\Entity;
 
-use Odiseo\Bundle\UserBundle\Security\User;
+use Sylius\Component\User\Model\User;
 
 /**
  * AdminUser
