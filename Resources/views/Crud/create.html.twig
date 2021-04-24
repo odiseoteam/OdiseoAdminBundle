@@ -14,7 +14,7 @@
     {% include configuration.vars.templates.breadcrumb|default('@OdiseoAdmin/Crud/Create/_breadcrumb.html.twig') %}
 {% endblock %}
 
-{% form_theme form 'OdiseoAdminBundle:Form:theme.html.twig' %}
+{% form_theme form '@OdiseoAdmin/Form/theme.html.twig' %}
 
 {% block content %}
 {% include '@OdiseoAdmin/Crud/Create/_header.html.twig' %}

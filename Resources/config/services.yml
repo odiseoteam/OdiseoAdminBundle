@@ -5,3 +5,13 @@ services:
         arguments: ['@sylius.security.password_updater']
         tags:
             - { name: "kernel.event_listener", event: "sylius.admin_user.pre_update", method: "genericEventUpdater" }
+
+    sylius.controller.user_security:
+        class: Odiseo\Bundle\AdminBundle\Controller\SecurityController
+        public: true
+        arguments:
+            - '@security.authentication_utils'
+            - '@form.factory'
+            - '@twig'
+            - '@security.authorization_checker'
+            - '@router'

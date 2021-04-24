@@ -2,7 +2,7 @@ odiseo_admin_admin_user:
     resource: |
         alias: sylius.admin_user
         section: admin
-        templates: OdiseoAdminBundle:Crud
+        templates: '@OdiseoAdmin/Crud'
         except: ['show']
         redirect: index
         grid: odiseo_admin_user

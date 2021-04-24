@@ -1,5 +1,5 @@
 {% macro headers(grid, definition, requestAttributes) %}
-    {% import 'OdiseoAdminBundle:Macro:sorting.html.twig' as sorting %}
+    {% import '@OdiseoAdmin/Macro/sorting.html.twig' as sorting %}
 
     {% for field in definition.fields %}
         {% if field.enabled %}

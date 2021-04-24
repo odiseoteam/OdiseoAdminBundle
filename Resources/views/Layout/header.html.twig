@@ -15,16 +15,16 @@
 		<div class="navbar-custom-menu">
 			<ul class="nav navbar-nav">
 				<!-- Messages: style can be found in dropdown.less-->
-				{#{ include('OdiseoAdminBundle:Layout/Header:messagesMenu.html.twig') }#}
-				
+				{#{ include('@OdiseoAdmin/Layout/Header/messagesMenu.html.twig') }#}
+
 				<!-- Notifications: style can be found in dropdown.less -->
-				{#{ include('OdiseoAdminBundle:Layout/Header:notificationsMenu.html.twig') }#}
-				
+				{#{ include('@OdiseoAdmin/Layout/Header/notificationsMenu.html.twig') }#}
+
 				<!-- Tasks: style can be found in dropdown.less -->
-				{#{ include('OdiseoAdminBundle:Layout/Header:tasksMenu.html.twig') }#}
-                        
+				{#{ include('@OdiseoAdmin/Layout/Header/tasksMenu.html.twig') }#}
+
 				<!-- User Account: style can be found in dropdown.less -->
-				{{ include('OdiseoAdminBundle:Layout/Header:userAccount.html.twig') }}
+				{{ include('@OdiseoAdmin/Layout/Header/userAccount.html.twig') }}
 			</ul>
 		</div>
 	</nav>

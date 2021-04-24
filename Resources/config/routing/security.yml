@@ -4,7 +4,6 @@ odiseo_admin_login:
     defaults:
         _controller: sylius.controller.user_security:loginAction
         _sylius:
-            template: '@OdiseoAdminBundle/Security/login.html.twig'
             permission: true
 
 odiseo_admin_login_check:

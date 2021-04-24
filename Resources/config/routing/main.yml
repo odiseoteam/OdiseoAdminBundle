@@ -1,7 +1,7 @@
 odiseo_admin_index:
     path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
     defaults:
-        _controller: FrameworkBundle:Redirect:redirect
         route: "%odiseo_admin.homepage_route%"
         permanent: true
 
